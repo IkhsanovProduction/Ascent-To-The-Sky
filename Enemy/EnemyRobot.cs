@@ -15,16 +15,14 @@ public class EnemyRobot : MonoBehaviour
         GameObject Temporary_Bullet_Handler;
         Temporary_Bullet_Handler = Instantiate(_bullet, _pos.transform.position, _pos.transform.rotation) as GameObject;
 
-         Temporary_Bullet_Handler.transform.Rotate(Vector3.left * 360);
+        Temporary_Bullet_Handler.transform.Rotate(Vector3.left * 360);
 
-            Rigidbody Temporary_RigidBody;
-            Temporary_RigidBody = Temporary_Bullet_Handler.GetComponent<Rigidbody>();
+        Rigidbody Temporary_RigidBody;
+        Temporary_RigidBody = Temporary_Bullet_Handler.GetComponent<Rigidbody>();
 
-            Temporary_RigidBody.AddForce(transform.forward * bulletSpeed);
+        Temporary_RigidBody.AddForce(transform.forward * bulletSpeed);
 
-            Destroy(Temporary_Bullet_Handler, 5.0f);
-          
-        
+        Destroy(Temporary_Bullet_Handler, 5.0f);
     }
 
 
